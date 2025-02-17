@@ -8,19 +8,32 @@ import { useEffect, useState } from 'react';
 
 const Donation =  () => {
   const [myUrl, setMyUrl] = useState('');
-   useEffect(() => {
-     const fetchData = async () => {
+
+  useEffect(() => {
+    const fetchData = async () => {
       try {
         const response = await fetch('/api/donate');
-        const data = await response.json();
-        setMyUrl(data.myUrl);
+
+        // Vérifiez que la réponse est valide
+        if (response.ok) {
+          const data = await response.json();
+
+          // Vérifiez que `data` et `data.myUrl` sont définis
+          if (data && data.myUrl) {
+            setMyUrl(data.myUrl);
+          } else {
+            console.error('Invalid API response:', data);
+          }
+        } else {
+          console.error('API response error:', response.status);
+        }
       } catch (error) {
         console.error('Error fetching data:', error);
       }
-     };
-     fetchData();
-    
-   },[])
+    };
+
+    fetchData();
+  }, [])
 
  
   return (
