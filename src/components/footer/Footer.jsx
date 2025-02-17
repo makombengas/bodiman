@@ -34,7 +34,7 @@ const Footer = ({ opened, setOpened }) => {
             <div className='w-full h-10   flex justify-between '>
             {
               opened.name && (
-                <h3 className='pl-4 mt-1 md:mt-4   text-2xl uppercase font-bold mb-4 text-green-500'>
+                <h3 className='pl-4 mt-3 md:mt-4 text-md  md:text-2xl uppercase font-bold mb-4 text-green-500'>
                     {opened.name}
                   </h3>
               )
