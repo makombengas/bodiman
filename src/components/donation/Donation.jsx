@@ -74,7 +74,7 @@ const Donation =  () => {
               />
               <Link
                 className='p-2 rounded-sm text-[1rem] md:text-xl  font-bold transition ease-in-out duration-500 hover:bg-green-500 bg-green-700'
-                href={myUrl}
+                href={"https://gofund.me/66defb2b"}
                 target='_blank'>
                 {navigation.cta.text}
               </Link>
