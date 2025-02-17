@@ -24,7 +24,7 @@ Unsere Mission: **5 Häuser mit gebrannten Lehmziegeln bauen**, um das Dorf offi
 Falls du das Projekt weiterentwickeln möchtest, kannst du es lokal aufsetzen:  
 
 ```bash
-git clone https://github.com/makombengas/rettet-bodiman.git  
+git clone https://github.com/makombengas/bodiman.git  
 cd rettet-bodiman  
 npm install  
 npm run dev  
