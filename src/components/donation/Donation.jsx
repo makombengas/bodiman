@@ -10,9 +10,13 @@ const Donation =  () => {
   const [myUrl, setMyUrl] = useState('');
    useEffect(() => {
      const fetchData = async () => {
-       const response = await fetch('/api/donate');
-       const data = await response.json();
-       setMyUrl(data.myUrl);
+      try {
+        const response = await fetch('/api/donate');
+        const data = await response.json();
+        setMyUrl(data.myUrl);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
      };
      fetchData();
     
