@@ -204,7 +204,7 @@ export const navigation= {
     region: "Fanda, Nord-Makombe,  Kamerun. ",
     location: "Standort:",
     image: "/images/nature.png",
-    description: "Bodiman ist ein kleines Dorf in der Region Nord-Makombe, und ist ein territorium von das dorf Fanda. Einst eine typische ländliche Gemeinschaft, ist das Dorf heute unbewohnt und wird aufgrund seiner natürlichen Ressourcen genutzt.",
+    description: "Bodiman ist ein kleines Dorf in der Region Nord-Makombe, und ist ein Territorium von dem Dorf Fanda. Einst eine typische ländliche Gemeinschaft, ist das Dorf heute unbewohnt und wird aufgrund seiner natürlichen Ressourcen genutzt.",
     history: {
       title: "Die Geschichte von Bodiman",
       origins: "Bodiman wurde wahrscheinlich von lokalen ethnischen Gruppen wie den Fulbe oder Tikar gegründet, die sich in der Region niederließen, um die fruchtbaren Böden und natürlichen Ressourcen zu nutzen.",
