@@ -8,7 +8,7 @@ const BodimanComponent = () => {
   const scrollRef = useRef();
   const {scrollYProcess} = useScroll({container:scrollRef});
   const bodimanRef = useRef(null);
-  const isBodimanRefInview =useInView(bodimanRef);
+  const isBodimanRefInView =useInView(bodimanRef);
 
   return (
     <div
@@ -17,22 +17,31 @@ const BodimanComponent = () => {
       className='w-full px-4 scroll-mt-16 md:scroll-mt-16 py-8 md:py-16  max-w-7xl mx-auto'>
       <div ref={scrollRef}
       className=' flex justify-center items-center'>
-        <motion.div 
-        
-        initial={{  x: -250, opacity: 0}}
-        animate={isBodimanRefInview? {  x: 0, opacity: 1 } : { }}
-        transition={{ delay: 0.5, ease: 'easeInOut' }}
+        <div 
         className='h-full w-full  flex flex-col gap-4 md:gap-8'>
-          <h1 className='uppercase  text-4xl md:text-5xl lg:text-6xl font-bold  text-green-500'>
+          <motion.h1 
+           initial={{  x: -150, opacity: 0}}
+           animate={isBodimanRefInView? {  x: 0, opacity: 1 } : { }}
+           transition={{ delay: 0.5, ease: 'easeInOut' }}
+          
+          className='uppercase  text-4xl md:text-5xl lg:text-6xl font-bold  text-green-500'>
             {navigation.items[1].text}
-          </h1>
-          <div className=' w-full flex-col md:flex-row flex md:items-center gap-4'>
+          </motion.h1>
+          <motion.div 
+           initial={{  x: -150, opacity: 0}}
+           animate={isBodimanRefInView? {  x: 0, opacity: 1 } : { }}
+           transition={{ delay: 1, ease: 'easeInOut' }}
+          className=' w-full flex-col md:flex-row flex md:items-center gap-4'>
             <h3 className='text-xl font-bold'>{villageInfo.location}</h3>
             <span className='font-thin text-md md:text-lg lg:text-xl'>
               {villageInfo.region}
             </span>
-          </div>
-          <div className='flex flex-col gap-4'>
+          </motion.div>
+          <motion.div 
+           initial={{  x: -150, opacity: 0}}
+           animate={isBodimanRefInView? {  x: 0, opacity: 1 } : { }}
+           transition={{ delay: 1.5, ease: 'easeInOut' }}
+          className='flex flex-col gap-4'>
             <p className='font-thin  text-md md:text-lg lg:text-xl'>
               {villageInfo.description}
             </p>
@@ -88,8 +97,8 @@ const BodimanComponent = () => {
                 ))}
               </ul>
             </div>
-          </div>
-        </motion.div>
+          </motion.div>
+        </div>
       </div>
     </div>
   );

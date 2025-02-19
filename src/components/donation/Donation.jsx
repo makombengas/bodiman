@@ -4,7 +4,8 @@ import Link from 'next/link';
 import BeforeAfterImage from '../beforeAfterImage/BeforeAfterImage';
 import { navigation, projectData, spendenData } from '@/data/data';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useInView, useScroll, motion } from 'framer-motion';
 
 const Donation =  () => {
   const [myUrl, setMyUrl] = useState('');
@@ -35,13 +36,26 @@ const Donation =  () => {
     fetchData();
   }, [])
 
+  const scrollRef = useRef();
+  const { scrollYProcess } = useScroll({ container: scrollRef });
+  const donateRef = useRef(null);
+  const isDonateInView = useInView(donateRef);
+ 
+
  
   return (
     <div
       id='spenden'
+      ref={donateRef}
       className='w-full px-4 -scroll-mt-[14rem] md:scroll-mt-16 py-8 md:py-0  max-w-7xl mx-auto'>
-      <div className=' md:h-screen flex justify-center items-center'>
-        <div className='grid grid-cols-1 md:grid-cols-2 '>
+      <div 
+      ref={scrollRef}
+      className=' md:h-screen flex justify-center items-center'>
+        <motion.div 
+           initial={{scale: 0,  x: -150, opacity: 0}}
+           animate={isDonateInView ? {scale: 1,  x: 0, opacity: 1 } : { }}
+           transition={{ delay: 0.5, ease: 'easeInOut' }}
+        className='grid grid-cols-1 md:grid-cols-2 '>
           <div className='relative w-full h-[50vh] '>
             <div className=' absolute inset-0 w-full h-full bg-[#012d19]/50'>
               <BeforeAfterImage
@@ -81,7 +95,7 @@ const Donation =  () => {
             </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
