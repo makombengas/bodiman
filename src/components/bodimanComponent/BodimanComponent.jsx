@@ -19,8 +19,8 @@ const BodimanComponent = () => {
       className=' flex justify-center items-center'>
         <motion.div 
         
-        initial={{ scaleY: 0, y: -500, opacity: 0}}
-        animate={isBodimanRefInview? {scaleY: 1,  y: 0, opacity: 1 } : { }}
+        initial={{ scaleY: 0, x: -250, opacity: 0}}
+        animate={isBodimanRefInview? {scaleY: 1,  x: 0, opacity: 1 } : { }}
         transition={{ delay: 0.5, duration: .5, ease: 'easeInOut' }}
         className='h-full w-full  flex flex-col gap-4 md:gap-8'>
           <h1 className='uppercase  text-4xl md:text-5xl lg:text-6xl font-bold  text-green-500'>
