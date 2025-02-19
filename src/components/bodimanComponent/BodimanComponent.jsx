@@ -19,18 +19,14 @@ const BodimanComponent = () => {
       className=' flex justify-center items-center'>
         <div 
         className='h-full w-full  flex flex-col gap-4 md:gap-8'>
-          <motion.h1 
-           initial={{  x: -150, opacity: 0}}
-           animate={isBodimanRefInView? {  x: 0, opacity: 1 } : { }}
-           transition={{ delay: 0.5, ease: 'easeInOut' }}
-          
+          <h1          
           className='uppercase  text-4xl md:text-5xl lg:text-6xl font-bold  text-green-500'>
             {navigation.items[1].text}
-          </motion.h1>
+          </h1>
           <motion.div 
            initial={{  x: -150, opacity: 0}}
            animate={isBodimanRefInView? {  x: 0, opacity: 1 } : { }}
-           transition={{ delay: 1, ease: 'easeInOut' }}
+           transition={{ delay: .5, ease: 'easeInOut' }}
           className=' w-full flex-col md:flex-row flex md:items-center gap-4'>
             <h3 className='text-xl font-bold'>{villageInfo.location}</h3>
             <span className='font-thin text-md md:text-lg lg:text-xl'>
@@ -40,7 +36,7 @@ const BodimanComponent = () => {
           <motion.div 
            initial={{  x: -150, opacity: 0}}
            animate={isBodimanRefInView? {  x: 0, opacity: 1 } : { }}
-           transition={{ delay: 1.5, ease: 'easeInOut' }}
+           transition={{ delay: 1, ease: 'easeInOut' }}
           className='flex flex-col gap-4'>
             <p className='font-thin  text-md md:text-lg lg:text-xl'>
               {villageInfo.description}

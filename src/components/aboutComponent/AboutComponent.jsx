@@ -17,26 +17,24 @@ const AboutComponent = () => {
       className='w-full px-4 scroll-mt-16 py-8 md:py-16  max-w-7xl mx-auto'>
       <div ref={scrollRef} className='  '>
         <div className=' h-full  flex flex-col gap-8 md:gap-16'>
-          <motion.h1
-            initial={{ x: -150, opacity: 0 }}
-            animate={isAboutRefInview ? { x: 0, opacity: 1 } : {}}
-            transition={{ delay: 0.5, ease: 'easeInOut' }}
+          <h1
+           
             className='uppercase  text-4xl md:text-5xl lg:text-6xl font-bold  text-green-500'>
             {navigation.items[2].text}
-          </motion.h1>
+          </h1>
 
           <div className='flex flex-col gap-4'>
             <motion.h2
               initial={{ x: -150, opacity: 0 }}
               animate={isAboutRefInview ? { x: 0, opacity: 1 } : {}}
-              transition={{ delay: 1, ease: 'easeInOut' }}
+              transition={{ delay: .5, ease: 'easeInOut' }}
               className='text-2xl md:text-3xl lg:text-4xl'>
               {projectData.title}
             </motion.h2>
             <motion.p 
              initial={{  x: -150, opacity: 0}}
              animate={isAboutRefInview? {  x: 0, opacity: 1 } : { }}
-             transition={{ delay: 1.5, ease: 'easeInOut' }}
+             transition={{ delay: 1, ease: 'easeInOut' }}
             
             className='font-thin  text-md md:text-lg lg:text-xl'>
               {projectData.description}
@@ -44,7 +42,7 @@ const AboutComponent = () => {
           <motion.div 
             initial={{scaleY: 0,  x: -150, opacity: 0}}
             animate={isAboutRefInview? {scaleY: 1,  x: 0, opacity: 1 } : { }}
-            transition={{ delay: 2, ease: 'easeInOut' }}
+            transition={{ delay: 1.5, ease: 'easeInOut' }}
           className="">
           <Image
               priority
@@ -58,14 +56,14 @@ const AboutComponent = () => {
             <motion.h2 
                  initial={{  x: -150, opacity: 0}}
                  animate={isAboutRefInview? {  x: 0, opacity: 1 } : { }}
-                 transition={{ delay: 2.5, ease: 'easeInOut' }}
+                 transition={{ delay: 2, ease: 'easeInOut' }}
             className='text-2xl md:text-3xl lg:text-4xl'>
               {projectData.goalsSection.title}
             </motion.h2>
             <motion.p 
                  initial={{  x: -150, opacity: 0}}
                  animate={isAboutRefInview? {  x: 0, opacity: 1 } : { }}
-                 transition={{ delay: 3, ease: 'easeInOut' }}
+                 transition={{ delay: 2.5, ease: 'easeInOut' }}
             
             className='font-thin  text-md md:text-lg lg:text-xl'>
               {projectData.goalsSection.description}
@@ -73,7 +71,7 @@ const AboutComponent = () => {
             <motion.div 
                  initial={{  x: -150, opacity: 0}}
                  animate={isAboutRefInview? {  x: 0, opacity: 1 } : { }}
-                 transition={{ delay: 3.5, ease: 'easeInOut' }}
+                 transition={{ delay: 3, ease: 'easeInOut' }}
             className='flex flex-col gap-4'>
               <h2 className='text-2xl md:text-3xl lg:text-4xl'>
                 {projectData.goalsSection.goalsTitle}

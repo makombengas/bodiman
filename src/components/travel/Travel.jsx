@@ -19,27 +19,24 @@ const Travel = () => {
       ref={scrollRef}
       className='  '>
         <div className=' h-full  flex flex-col gap-8 md:gap-16'>
-          <motion.h1 
-             initial={{  x: -150, opacity: 0}}
-             animate={isTravelInView ? {  x: 0, opacity: 1 } : { }}
-             transition={{ delay: 0.5, ease: 'easeInOut' }}
+          <h1 
           className='uppercase  text-4xl md:text-5xl lg:text-6xl font-bold  text-green-500'>
             Reise nach Kamerun
-          </motion.h1>
+          </h1>
           <div className='flex flex-col md:flex-row items-center gap-4 md:gap-8'>
             <div className='w-full md:w-1/2'>
               <div className='flex flex-col gap-4'>
                 <motion.h2 
                   initial={{  x: -150, opacity: 0}}
                   animate={isTravelInView ? {  x: 0, opacity: 1 } : { }}
-                  transition={{ delay: 1, ease: 'easeInOut' }}
+                  transition={{ delay: .5, ease: 'easeInOut' }}
                 className='text-2xl md:text-3xl lg:text-4xl'>
                   {projectData.travelSection.title}
                 </motion.h2>
                 <motion.p 
                   initial={{  x: -150, opacity: 0}}
                   animate={isTravelInView ? {  x: 0, opacity: 1 } : { }}
-                  transition={{ delay: 1.5, ease: 'easeInOut' }}
+                  transition={{ delay: 1, ease: 'easeInOut' }}
                 className='font-thin  text-md md:text-lg lg:text-xl'>
                   {projectData.travelSection.description}
                 </motion.p>
@@ -47,7 +44,7 @@ const Travel = () => {
               <motion.div 
                 initial={{  x: -150, opacity: 0}}
                 animate={isTravelInView ? {  x: 0, opacity: 1 } : { }}
-                transition={{ delay: 2, ease: 'easeInOut' }}
+                transition={{ delay: 1.5, ease: 'easeInOut' }}
               className='mt-4 flex flex-col gap-4'>
                 <h2 className='text-2xl md:text-3xl lg:text-4xl'>
                   {projectData.travelSection.itinaryTitle}
@@ -64,7 +61,7 @@ const Travel = () => {
             <motion.div 
               initial={{  x: 150, opacity: 0}}
               animate={isTravelInView ? {  x: 0, opacity: 1 } : { }}
-              transition={{ delay: 2.5, ease: 'easeInOut' }}
+              transition={{ delay: 2, ease: 'easeInOut' }}
             className='w-full md:w-1/2'>
               <Image
                 priority
