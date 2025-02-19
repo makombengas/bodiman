@@ -1,12 +1,28 @@
+"use client"
+
 import { navigation, villageInfo } from '@/data/data';
+import { motion, useInView, useScroll } from 'framer-motion';
+import { useRef } from 'react';
 
 const BodimanComponent = () => {
+  const scrollRef = useRef();
+  const {scrollYProcess} = useScroll({container:scrollRef});
+  const bodimanRef = useRef(null);
+  const isBodimanRefInview =useInView(bodimanRef);
+
   return (
     <div
+      ref={bodimanRef}
       id='bodiman'
       className='w-full px-4 scroll-mt-16 md:scroll-mt-16 py-8 md:py-16  max-w-7xl mx-auto'>
-      <div className=' flex justify-center items-center'>
-        <div className='h-full w-full  flex flex-col gap-4 md:gap-8'>
+      <div ref={scrollRef}
+      className=' flex justify-center items-center'>
+        <motion.div 
+        
+        initial={{ scaleY: 0, y: -500, opacity: 0}}
+        animate={isBodimanRefInview? {scaleY: 1,  y: 0, opacity: 1 } : { }}
+        transition={{ delay: 0.5, duration: .5, ease: 'easeInOut' }}
+        className='h-full w-full  flex flex-col gap-4 md:gap-8'>
           <h1 className='uppercase  text-4xl md:text-5xl lg:text-6xl font-bold  text-green-500'>
             {navigation.items[1].text}
           </h1>
@@ -73,7 +89,7 @@ const BodimanComponent = () => {
               </ul>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

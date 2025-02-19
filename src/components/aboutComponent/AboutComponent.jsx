@@ -1,10 +1,19 @@
+"use client"
+
 import { navigation, projectData } from "@/data/data"
+import { motion } from "framer-motion"
 import Image from 'next/image'
+import { useRef } from "react"
 
 const AboutComponent = () => {
+  const scrollRef = useRef(null)
   return (
-    <div id="about" className="w-full px-4 scroll-mt-16 py-8 md:py-16  max-w-7xl mx-auto">
-        <div className="  ">
+    <div ref={scrollRef} id="about" className="w-full px-4 scroll-mt-16 py-8 md:py-16  max-w-7xl mx-auto">
+        <motion.div
+         initial={{ opacity: 0 }}
+         whileInView={{ opacity: 1 }}
+         viewport={{ root: scrollRef }}
+        className="  ">
             <div className=" h-full  flex flex-col gap-8 md:gap-16">
                 <h1 className="uppercase  text-4xl md:text-5xl lg:text-6xl font-bold  text-green-500">
                   {navigation.items[2].text}
@@ -36,7 +45,7 @@ const AboutComponent = () => {
                   </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     </div>
   )
 }
