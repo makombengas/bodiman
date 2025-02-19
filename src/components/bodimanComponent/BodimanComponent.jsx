@@ -21,7 +21,7 @@ const BodimanComponent = () => {
         
         initial={{ scaleY: 0, x: -250, opacity: 0}}
         animate={isBodimanRefInview? {scaleY: 1,  x: 0, opacity: 1 } : { }}
-        transition={{ delay: 0.5, duration: .5, ease: 'easeInOut' }}
+        transition={{ delay: 0.5, ease: 'easeInOut' }}
         className='h-full w-full  flex flex-col gap-4 md:gap-8'>
           <h1 className='uppercase  text-4xl md:text-5xl lg:text-6xl font-bold  text-green-500'>
             {navigation.items[1].text}
