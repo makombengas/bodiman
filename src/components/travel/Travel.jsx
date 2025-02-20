@@ -27,25 +27,25 @@ const Travel = () => {
             <div className='w-full md:w-1/2'>
               <div className='flex flex-col gap-4'>
                 <motion.h2 
-                  initial={{  x: -150, opacity: 0}}
-                  animate={isTravelInView ? {  x: 0, opacity: 1 } : { }}
+                  initial={{  y: -50, opacity: 0}}
+                  animate={isTravelInView ? {  y: 0, opacity: 1 } : { }}
                   transition={{ delay: .5, ease: 'easeInOut' }}
                 className='text-2xl md:text-3xl lg:text-4xl'>
                   {projectData.travelSection.title}
                 </motion.h2>
                 <motion.p 
-                  initial={{  x: -150, opacity: 0}}
-                  animate={isTravelInView ? {  x: 0, opacity: 1 } : { }}
+                  initial={{  y: -80, opacity: 0}}
+                  animate={isTravelInView ? {  y: 0, opacity: 1 } : { }}
                   transition={{ delay: 1, ease: 'easeInOut' }}
                 className='font-thin  text-md md:text-lg lg:text-xl'>
                   {projectData.travelSection.description}
                 </motion.p>
               </div>
               <motion.div 
-                initial={{  x: -150, opacity: 0}}
-                animate={isTravelInView ? {  x: 0, opacity: 1 } : { }}
+                initial={{  y: -100, opacity: 0}}
+                animate={isTravelInView ? {  y: 0, opacity: 1 } : { }}
                 transition={{ delay: 1.5, ease: 'easeInOut' }}
-              className='mt-4 flex flex-col gap-4'>
+                className='mt-4 flex flex-col gap-4'>
                 <h2 className='text-2xl md:text-3xl lg:text-4xl'>
                   {projectData.travelSection.itinaryTitle}
                 </h2>
@@ -59,8 +59,8 @@ const Travel = () => {
               </motion.div>
             </div>
             <motion.div 
-              initial={{  x: 150, opacity: 0}}
-              animate={isTravelInView ? {  x: 0, opacity: 1 } : { }}
+              initial={{  y: -150, opacity: 0}}
+              animate={isTravelInView ? {  y: 0, opacity: 1 } : { }}
               transition={{ delay: 2, ease: 'easeInOut' }}
             className='w-full md:w-1/2'>
               <Image

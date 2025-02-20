@@ -52,8 +52,8 @@ const Donation =  () => {
       ref={scrollRef}
       className=' md:h-screen flex justify-center items-center'>
         <motion.div 
-           initial={{scale: 0,  x: -150, opacity: 0}}
-           animate={isDonateInView ? {scale: 1,  x: 0, opacity: 1 } : { }}
+           initial={{ scale: 0,  y: -50, opacity: 0}}
+           animate={isDonateInView ? { scale: 1,  y: 0, opacity: 1 } : { }}
            transition={{ delay: 0.5, ease: 'easeInOut' }}
         className='grid grid-cols-1 md:grid-cols-2 '>
           <div className='relative w-full h-[50vh] '>

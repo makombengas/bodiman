@@ -25,23 +25,23 @@ const AboutComponent = () => {
 
           <div className='flex flex-col gap-4'>
             <motion.h2
-              initial={{ x: -150, opacity: 0 }}
-              animate={isAboutRefInview ? { x: 0, opacity: 1 } : {}}
+              initial={{ y: -60, opacity: 0 }}
+              animate={isAboutRefInview ? { y: 0, opacity: 1 } : {}}
               transition={{ delay: .5, ease: 'easeInOut' }}
               className='text-2xl md:text-3xl lg:text-4xl'>
               {projectData.title}
             </motion.h2>
             <motion.p 
-             initial={{  x: -150, opacity: 0}}
-             animate={isAboutRefInview? {  x: 0, opacity: 1 } : { }}
+             initial={{  y: -70, opacity: 0}}
+             animate={isAboutRefInview? {  y: 0, opacity: 1 } : { }}
              transition={{ delay: 1, ease: 'easeInOut' }}
             
             className='font-thin  text-md md:text-lg lg:text-xl'>
               {projectData.description}
             </motion.p>
           <motion.div 
-            initial={{scaleY: 0,  x: -150, opacity: 0}}
-            animate={isAboutRefInview? {scaleY: 1,  x: 0, opacity: 1 } : { }}
+            initial={{scaleY: 0,  y: -80, opacity: 0}}
+            animate={isAboutRefInview? {scaleY: 1,  y: 0, opacity: 1 } : { }}
             transition={{ delay: 1.5, ease: 'easeInOut' }}
           className="">
           <Image
@@ -54,23 +54,23 @@ const AboutComponent = () => {
             />
           </motion.div>
             <motion.h2 
-                 initial={{  x: -150, opacity: 0}}
-                 animate={isAboutRefInview? {  x: 0, opacity: 1 } : { }}
+                 initial={{  y: -100, opacity: 0}}
+                 animate={isAboutRefInview? {  y: 0, opacity: 1 } : { }}
                  transition={{ delay: 2, ease: 'easeInOut' }}
             className='text-2xl md:text-3xl lg:text-4xl'>
               {projectData.goalsSection.title}
             </motion.h2>
             <motion.p 
-                 initial={{  x: -150, opacity: 0}}
-                 animate={isAboutRefInview? {  x: 0, opacity: 1 } : { }}
+                 initial={{  y: -150, opacity: 0}}
+                 animate={isAboutRefInview? {  y: 0, opacity: 1 } : { }}
                  transition={{ delay: 2.5, ease: 'easeInOut' }}
             
             className='font-thin  text-md md:text-lg lg:text-xl'>
               {projectData.goalsSection.description}
             </motion.p>
             <motion.div 
-                 initial={{  x: -150, opacity: 0}}
-                 animate={isAboutRefInview? {  x: 0, opacity: 1 } : { }}
+                 initial={{  y: -150, opacity: 0}}
+                 animate={isAboutRefInview? {  y: 0, opacity: 1 } : { }}
                  transition={{ delay: 3, ease: 'easeInOut' }}
             className='flex flex-col gap-4'>
               <h2 className='text-2xl md:text-3xl lg:text-4xl'>

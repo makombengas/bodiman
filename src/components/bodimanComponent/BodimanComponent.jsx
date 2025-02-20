@@ -24,8 +24,8 @@ const BodimanComponent = () => {
             {navigation.items[1].text}
           </h1>
           <motion.div 
-           initial={{  x: -150, opacity: 0}}
-           animate={isBodimanRefInView? {  x: 0, opacity: 1 } : { }}
+           initial={{  y: -80, opacity: 0}}
+           animate={isBodimanRefInView? {  y: 0, opacity: 1 } : { }}
            transition={{ delay: .5, ease: 'easeInOut' }}
           className=' w-full flex-col md:flex-row flex md:items-center gap-4'>
             <h3 className='text-xl font-bold'>{villageInfo.location}</h3>
@@ -34,8 +34,8 @@ const BodimanComponent = () => {
             </span>
           </motion.div>
           <motion.div 
-           initial={{  x: -150, opacity: 0}}
-           animate={isBodimanRefInView? {  x: 0, opacity: 1 } : { }}
+           initial={{  y: -50, opacity: 0}}
+           animate={isBodimanRefInView? {  y: 0, opacity: 1 } : { }}
            transition={{ delay: 1, ease: 'easeInOut' }}
           className='flex flex-col gap-4'>
             <p className='font-thin  text-md md:text-lg lg:text-xl'>
