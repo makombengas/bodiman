@@ -11,8 +11,8 @@ const Footer = ({ opened, setOpened }) => {
 
   return (
     <div className='relative h-16  z-[2]  bg-[#000000]/30  text-white'>
-      <div className='w-full px-4 h-full   max-w-7xl mx-auto'>
-        <div className='  flex h-full gap-2 justify-between items-center '>
+      <div className='w-full px-4 h-full flex flex-col justify-center   max-w-7xl mx-auto'>
+        <div className='flex-col h-auto justify-center md:flex-row  flex md:h-full gap-2 md:justify-between items-center '>
           <p className='text-[.5rem]  md:text-sm'>{footerSimple.copyright}</p>
           <div className='flex items-center gap-4'>
             <p
