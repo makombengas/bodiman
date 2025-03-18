@@ -18,7 +18,7 @@ const LayoutComponents = ({children}) => {
   
 
   return (
-    <div  className={`scroll-smooth h-[100ivh] md:h-auto bg-gradient-to-r from-[#012d19] to-[#012d19]/95   text-white  `}  >
+    <div  className={`scroll-smooth h-[100lvh] md:h-auto bg-gradient-to-r from-[#012d19] to-[#012d19]/95   text-white  `}  >
         <Navbar   />
         {children}
         <Footer opened={opened} setOpened={setOpened} />
