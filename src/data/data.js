@@ -286,7 +286,7 @@ export const navigation= {
         rights: {
           title: "Ihre Rechte",
           description: "Sie haben jederzeit das Recht auf Auskunft über Ihre gespeicherten personenbezogenen Daten sowie auf Berichtigung, Sperrung oder Löschung dieser Daten.",
-          contact: "Falls Sie Fragen zum Datenschutz haben, können Sie uns jederzeit unter info@rettet-bodiman.de kontaktieren."
+          contact: "Falls Sie Fragen zum Datenschutz haben, können Sie uns jederzeit unter berlioz2001@yahoo.fr kontaktieren."
         }
       }
      }
